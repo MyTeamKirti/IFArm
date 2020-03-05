@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorGreyBg"
+    tools:context=".activity.ProductDescriptionActivity">
+
+    <LinearLayout
+        android:id="@+id/linearProduct"
+        android:layout_width="match_parent"
+        android:layout_height="285dp"
+        android:orientation="vertical"
+        android:background="@drawable/productdetail"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            app:srcCompat="@drawable/ic_back_icon_transparant"
+            android:layout_marginLeft="@dimen/margin_size_16dp"
+            android:layout_marginTop="42dp"
+            android:contentDescription="@string/app_name"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/linearProduct"
+        android:paddingLeft="@dimen/margin_size_16dp"
+        android:paddingRight="@dimen/margin_size_16dp"
+        android:paddingBottom="@dimen/margin_size_20dp"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+    <com.example.ifarm.utils.CustomTextView
+        android:id="@+id/tvDescriptionTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size_18sp"
+        app:font_name="sfuidisplay_bold"
+        android:text="Description "
+        android:layout_marginTop="@dimen/margin_size_20dp"
+        android:textColor="@color/colordarkestGrey"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <com.example.ifarm.utils.CustomTextView
+            android:id="@+id/tvKindTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kind"
+            android:textSize="@dimen/text_size_14sp"
+            app:font_name="sfuidisplay_regular"
+            android:textColor="@color/colorTextGrey"
+            android:layout_marginTop="@dimen/margin_size_10dp"
+            app:layout_constraintTop_toBottomOf="@+id/tvDescriptionTitle"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <com.example.ifarm.utils.CustomTextView
+            android:id="@+id/tvKindValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_18sp"
+            app:font_name="sfuidisplay_bold"
+            android:text="Seeds"
+            android:textColor="@color/colordarkestGrey"
+            app:layout_constraintTop_toBottomOf="@+id/tvKindTitle"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+
+        <com.example.ifarm.utils.CustomTextView
+        android:id="@+id/tvVarietyTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Variety"
+        android:textSize="@dimen/text_size_14sp"
+        app:font_name="sfuidisplay_regular"
+        android:textColor="@color/colorTextGrey"
+        android:layout_marginTop="@dimen/margin_size_10dp"
+        android:layout_marginLeft="@dimen/margin_size_100dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvDescriptionTitle"
+        app:layout_constraintLeft_toRightOf="@+id/tvDescriptionTitle"/>
+
+        <com.example.ifarm.utils.CustomTextView
+            android:id="@+id/tvVarietyValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_18sp"
+            app:font_name="sfuidisplay_bold"
+            android:text="Lorem ipsum"
+            android:textColor="@color/colordarkestGrey"
+            android:layout_marginLeft="@dimen/margin_size_100dp"
+            app:layout_constraintTop_toBottomOf="@+id/tvVarietyTitle"
+            app:layout_constraintLeft_toRightOf="@+id/tvDescriptionTitle"/>
+
+        <com.example.ifarm.utils.CustomTextView
+            android:id="@+id/tvProductTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Product and MFG."
+            android:textSize="@dimen/text_size_14sp"
+            app:font_name="sfuidisplay_regular"
+            android:textColor="@color/colorTextGrey"
+            android:layout_marginTop="@dimen/margin_size_15dp"
+            app:layout_constraintTop_toBottomOf="@+id/tvKindValue"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <com.example.ifarm.utils.CustomTextView
+            android:id="@+id/tvProductValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_18sp"
+            app:font_name="sfuidisplay_bold"
+            android:text="Daman Seeds"
+            android:textColor="@color/colordarkestGrey"
+            app:layout_constraintTop_toBottomOf="@+id/tvProductTitle"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+
+        <com.example.ifarm.utils.CustomTextView
+            android:id="@+id/tvPriceTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Price"
+            android:textSize="@dimen/text_size_14sp"
+            app:font_name="sfuidisplay_regular"
+            android:textColor="@color/colorTextGrey"
+            android:layout_marginTop="@dimen/margin_size_15dp"
+            android:layout_marginLeft="@dimen/margin_size_100dp"
+            app:layout_constraintTop_toBottomOf="@+id/tvVarietyValue"
+            app:layout_constraintLeft_toRightOf="@+id/tvDescriptionTitle"/>
+
+        <com.example.ifarm.utils.CustomTextView
+            android:id="@+id/tvPriceValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_16sp"
+            app:font_name="sfuidisplay_bold"
+            android:text="500 KWD"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginLeft="@dimen/margin_size_100dp"
+            app:layout_constraintTop_toBottomOf="@+id/tvPriceTitle"
+            app:layout_constraintLeft_toRightOf="@+id/tvDescriptionTitle"/>
+
+        <com.example.ifarm.utils.CustomTextView
+            android:id="@+id/tvDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_12sp"
+            app:font_name="sfuidisplay_regular"
+            android:text="@string/dummydesc"
+            android:textColor="@color/colorEtText"
+            android:lineSpacingExtra="@dimen/margin_size_5dp"
+            android:layout_marginRight="@dimen/margin_size_16dp"
+            android:layout_marginTop="@dimen/margin_size_20dp"
+            app:layout_constraintTop_toBottomOf="@+id/tvPriceValue"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <com.example.ifarm.utils.CustomButton
+        android:id="@+id/buttonAddtoCart"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_size_48dp"
+        android:background="@drawable/button_fillbg"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/text_size_16sp"
+        android:text="Add to Cart"
+        android:gravity="center"
+        app:font_name="sfuidisplay_bold"
+        android:textAllCaps="false"
+        android:visibility="visible"
+        android:layout_marginLeft="@dimen/margin_size_38dp"
+        android:layout_marginRight="@dimen/margin_size_38dp"
+        android:layout_marginBottom="@dimen/margin_size_38dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintCartBtn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_size_48dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="@dimen/margin_size_8dp"
+        android:visibility="gone"
+        android:background="@drawable/button_fillbg"
+        android:layout_marginLeft="@dimen/margin_size_38dp"
+        android:layout_marginRight="@dimen/margin_size_38dp"
+        android:layout_marginBottom="@dimen/margin_size_38dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/ivminusProduct"
+            android:layout_width="@dimen/margin_size_20dp"
+            android:layout_height="@dimen/margin_size_20dp"
+            app:srcCompat="@drawable/ic_minus_icon_small"
+            android:layout_marginLeft="@dimen/margin_size_20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <com.example.ifarm.utils.CustomTextView
+            android:id="@+id/tvQuantityUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_size_16sp"
+            app:font_name="sfuidisplay_bold"
+            android:gravity="center"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+        <ImageView
+            android:id="@+id/ivPlusProduct"
+            android:layout_width="@dimen/margin_size_20dp"
+            android:layout_height="@dimen/margin_size_20dp"
+            app:srcCompat="@drawable/ic_plus_icon_small"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginRight="@dimen/margin_size_20dp"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

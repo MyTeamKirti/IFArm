@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">IFarm</string>
+    <string name="title_activity_login">Sign in</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+
+    <string name="business_reg">Business\nRegistration </string>
+    <string name="buyer_reg">Buyer\nRegistration </string>
+    <string name="confirmpswd">Confirm Password</string>
+    <string name="email">Email</string>
+    <string name="login">Log In</string>
+    <string name="offerexchange">Offer Exchange</string>
+    <string name="password">Password</string>
+    <string name="searchbarhint">Search For Agro-Products</string>
+    <string name="signup">Sign up</string>
+    <string name="signupdonthaveaccountlogin"><![CDATA[Don\'t have a account yet? Log in]]></string>
+    <string name="signupdonthaveaccount"><![CDATA[Don\'t have a account yet? Sign Up]]></string>
+    <string name="username">Username</string>
+    <string name="newUser">New User? <![CDATA[<b><font color=#3968d5>Sign Up</font></b>]]> </string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_orderhistory">Order History</string>
+    <string name="menu_review">Review</string>
+    <string name="menu_aboutus">About us</string>
+    <string name="menu_contactus">Contact us</string>
+    <string name="menu_faq">FAQ\'s</string>
+    <string name="menu_logout">Log Out</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="dummydesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae scelerisque augue. Proin lobortis convallis aliquam. Morbi commodo euismod ante, sit amet vulputate nibh condimentum eget.</string>
+
+
+</resources>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGreyBg"
+    android:padding="@dimen/margin_size_16dp"
+    tools:context=".activity.RegistrationActivity">
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="@dimen/margin_size_120dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/applogo"
+        android:contentDescription="@string/app_name" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintGreen"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_size_120dp"
+        android:background="@drawable/gradiant_green"
+        app:layout_constraintTop_toBottomOf="@+id/ivLogo"
+        android:layout_marginTop="90dp"
+        android:paddingVertical="@dimen/margin_size_8dp"
+        android:paddingHorizontal="@dimen/margin_size_16dp">
+
+        <com.example.ifarm.utils.CustomTextView
+            android:id="@+id/tvBusReg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/business_reg"
+            android:textSize="@dimen/text_size_18sp"
+            android:textColor="@color/colorWhite"
+            app:font_name="sfuidisplay_medium"
+            android:layout_marginTop="@dimen/margin_size_8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+
+        <ImageView
+            android:id="@+id/ivBusinessReg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/mobilegreen"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:contentDescription="@string/app_name" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintBlue"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_size_120dp"
+        android:background="@drawable/gradiant_blue"
+        app:layout_constraintTop_toBottomOf="@+id/constraintGreen"
+        android:layout_marginTop="@dimen/margin_size_16dp"
+        android:paddingVertical="@dimen/margin_size_8dp"
+        android:paddingHorizontal="@dimen/margin_size_16dp">
+
+        <com.example.ifarm.utils.CustomTextView
+            android:id="@+id/tvBuyerReg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/buyer_reg"
+            android:textSize="@dimen/text_size_18sp"
+            android:textColor="@color/colorWhite"
+            app:font_name="sfuidisplay_medium"
+            android:layout_marginTop="@dimen/margin_size_8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+
+        <ImageView
+            android:id="@+id/ivBuyerReg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/mobileblue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:contentDescription="@string/app_name" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

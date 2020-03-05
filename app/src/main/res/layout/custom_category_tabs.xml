@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable name="model" type="com.example.ifarm.model.CategoryResult"/>
+    </data>
+
+    <LinearLayout
+        android:id="@+id/linearTabButton"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="@dimen/margin_size_8dp"
+        android:gravity="center"
+        android:layout_marginLeft="@dimen/margin_size_16dp"
+        >
+
+        <com.example.ifarm.utils.CustomTextView
+            android:id="@+id/tvCategoryName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:minWidth="@dimen/margin_size_48dp"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_size_16sp"
+            android:text="@{model.categoryName}"
+            app:font_name="sfuidisplay_regular"
+            android:maxLines="1"/>
+    </LinearLayout>
+</layout>

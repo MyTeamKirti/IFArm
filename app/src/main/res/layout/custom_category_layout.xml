@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable name="model" type="com.example.ifarm.model.ProductData1"/>
+    </data>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="135dp"
+    android:layout_height="195dp"
+    android:layout_marginRight="@dimen/margin_size_16dp">
+
+    <ImageView
+        android:id="@+id/ivCategoryHome"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/group_4788"
+        android:scaleType="fitXY"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <com.example.ifarm.utils.CustomTextView
+        android:id="@+id/tvCategoryName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@{model.name}"
+        android:textColor="@color/colorWhite"
+        app:font_name="sfuidisplay_bold"
+        android:textSize="@dimen/text_size_16sp"
+        android:layout_marginLeft="@dimen/margin_size_8dp"
+        android:layout_marginTop="@dimen/margin_size_20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.ifarm">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".activity.EditProfileActivity"></activity>
+        <activity android:name=".activity.PaymentActivity" />
+        <activity android:name=".activity.ProductDescriptionActivity" />
+        <activity android:name=".activity.CompanyProductsActivity" />
+        <activity android:name=".activity.CompanyInfoActivity" />
+        <activity android:name=".activity.BuyerInfoActivity" />
+        <activity android:name=".activity.FAQActivity" />
+        <activity android:name=".activity.ContactusActivity" />
+        <activity android:name=".activity.AboutUsActivity" />
+        <activity android:name=".activity.ReviewsActivity" />
+        <activity android:name=".activity.OrderHistoryActivity" />
+        <activity android:name=".activity.CartActivity" />
+        <activity android:name=".activity.HomeActivity" />
+        <activity android:name=".activity.RegistrationActivity" />
+        <activity android:name=".activity.SignupActivity" />
+        <activity android:name=".activity.LoginActivity" />
+        <activity android:name=".activity.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

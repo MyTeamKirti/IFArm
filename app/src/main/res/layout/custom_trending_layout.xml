@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <import type="android.view.View"/>
+        <variable name="model" type="com.example.ifarm.model.ProductData1"/>
+    </data>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="362dp"
+    android:layout_height="190dp"
+    android:layout_marginRight="@dimen/margin_size_16dp">
+
+    <ImageView
+        android:id="@+id/ivTrendingProduct"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/seeds1"
+        android:scaleType="fitXY"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <com.example.ifarm.utils.CustomTextView
+        android:id="@+id/tvTrendingProductName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@{model.name}"
+        android:textColor="@color/colorWhite"
+        app:font_name="sfuidisplay_bold"
+        android:textSize="@dimen/text_size_16sp"
+        android:layout_marginLeft="@dimen/margin_size_8dp"
+        android:layout_marginBottom="@dimen/margin_size_20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <ImageView
+        android:id="@+id/ivNextProduct"
+        android:layout_width="@dimen/margin_size_32dp"
+        android:layout_height="@dimen/margin_size_32dp"
+        android:layout_marginBottom="@dimen/margin_size_10dp"
+        android:layout_marginRight="@dimen/margin_size_10dp"
+        app:srcCompat="@drawable/ic_nextproduct"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

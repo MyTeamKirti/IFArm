@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+
+    <include
+        layout="@layout/app_bar_home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header_home" >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <com.example.ifarm.utils.CircularImageView
+            android:id="@+id/ivUser"
+            android:layout_width="@dimen/margin_size_100dp"
+            android:layout_height="@dimen/margin_size_100dp"
+            android:layout_marginTop="82dp"
+            android:src="@drawable/narendra_modi_avatar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+            <com.example.ifarm.utils.CustomTextView
+                android:id="@+id/tvUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jhon Doe"
+                android:textColor="@color/colordarkestGrey"
+                app:font_name="sfuidisplay_bold"
+                android:textSize="@dimen/text_size_20sp"
+                android:layout_marginTop="@dimen/margin_size_12dp"
+                app:layout_constraintTop_toBottomOf="@+id/ivUser"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+            <com.example.ifarm.utils.CustomTextView
+                android:id="@+id/tvUserEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jondoe@username.com"
+                android:textColor="@color/colorEtText"
+                app:font_name="sfuidisplay_regular"
+                android:textSize="@dimen/text_size_14sp"
+                app:layout_constraintTop_toBottomOf="@+id/tvUserName"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+            <View
+                android:id="@+id/border"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/colorGreyBorder"
+                android:layout_marginTop="@dimen/margin_size_40dp"
+                android:layout_marginLeft="@dimen/margin_size_16dp"
+                android:layout_marginRight="@dimen/margin_size_16dp"
+                app:layout_constraintTop_toBottomOf="@+id/tvUserEmail" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvNavigationItems"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/border"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.navigation.NavigationView>
+
+</androidx.drawerlayout.widget.DrawerLayout>
