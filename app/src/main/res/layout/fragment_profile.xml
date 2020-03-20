@@ -21,16 +21,77 @@
         android:paddingTop="@dimen/margin_size_20dp"
         android:paddingBottom="@dimen/margin_size_20dp">
 
-    <LinearLayout
+        <LinearLayout
+            android:id="@+id/linearFollowers"
+            android:layout_width="80dp"
+            android:layout_height="@dimen/margin_size_48dp"
+            android:background="@drawable/button_fillbg"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_marginBottom="@dimen/margin_size_16dp"
+            app:layout_constraintBottom_toTopOf="@+id/constraintFields"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.example.ifarm.utils.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="15"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text_size_16sp"
+                app:font_name="sfuidisplay_bold" />
+
+            <com.example.ifarm.utils.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Followers"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text_size_12sp"
+                app:font_name="sfuidisplay_medium" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linearFollowing"
+            android:layout_width="80dp"
+            android:layout_height="@dimen/margin_size_48dp"
+            android:layout_marginBottom="@dimen/margin_size_16dp"
+            android:background="@drawable/button_fillbg"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/constraintFields"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.example.ifarm.utils.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text_size_16sp"
+                app:font_name="sfuidisplay_bold" />
+
+            <com.example.ifarm.utils.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Following"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text_size_12sp"
+                app:font_name="sfuidisplay_medium" />
+
+        </LinearLayout>
+
+    <com.example.ifarm.utils.CircularImageView
         android:id="@+id/ivUser"
-        android:layout_width="@dimen/margin_size_100dp"
-        android:layout_height="@dimen/margin_size_100dp"
-        android:background="@color/colorPrimary"
+        android:layout_width="@dimen/margin_size_120dp"
+        android:layout_height="@dimen/margin_size_120dp"
+        android:background="@drawable/user2"
+        android:elevation="3dp"
         app:layout_constraintTop_toTopOf="@+id/constraintFields"
         app:layout_constraintBottom_toTopOf="@+id/constraintFields"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:orientation="horizontal" />
+        app:layout_constraintRight_toRightOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintFields"
@@ -228,6 +289,24 @@
             app:layout_constraintTop_toBottomOf="@+id/tvDescription">
 
             <CheckBox
+                android:id="@+id/cbSell"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="Sell"
+                android:textSize="@dimen/text_size_16sp"
+                android:textColor="@color/colorPrimary"
+                android:buttonTint="@color/colorPrimary"
+                android:fontFamily="@font/sf_ui_display_bold"
+                android:paddingTop="@dimen/margin_size_15dp"
+                android:paddingBottom="@dimen/margin_size_15dp"
+                android:layout_marginLeft="@dimen/margin_size_32dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/border5"
+                app:layout_constraintLeft_toLeftOf="parent"
+                />
+
+            <CheckBox
                 android:id="@+id/cbExchangeProducts"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -236,12 +315,13 @@
                 android:textSize="@dimen/text_size_16sp"
                 android:textColor="@color/colorPrimary"
                 android:buttonTint="@color/colorPrimary"
+                android:fontFamily="@font/sf_ui_display_bold"
                 android:paddingTop="@dimen/margin_size_15dp"
                 android:paddingBottom="@dimen/margin_size_15dp"
-                android:layout_marginLeft="@dimen/margin_size_16dp"
+                android:layout_marginRight="@dimen/margin_size_32dp"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toTopOf="@+id/border5"
-                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 />
 
             <View
@@ -342,6 +422,7 @@
                     app:layout_constraintLeft_toLeftOf="parent"/>
 
                 <com.example.ifarm.utils.CustomEditText
+                    android:id="@+id/etExchangeValue"
                     android:layout_width="@dimen/margin_size_200dp"
                     android:layout_height="wrap_content"
                     android:textSize="@dimen/text_size_14sp"

@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import com.example.ifarm.activity.BuyerInfoActivity
 import com.example.ifarm.activity.CompanyProductsActivity
 import com.example.ifarm.activity.ProductDescriptionActivity
+import com.example.ifarm.activity.ShopDetailsActivity
 import com.example.ifarm.databinding.CustomRawRatedproductLayoutBinding
 import com.example.ifarm.model.ProductData1
 import com.svap.beep.abstractclasses.BaseBindingAdapter
@@ -32,7 +33,9 @@ class ProductRawAdapter4(internal var productList:ArrayList<ProductData1>):
 
 
             mBinding.root.setOnClickListener {
-                val intent= Intent(context, CompanyProductsActivity::class.java)
+//                val intent= Intent(context, CompanyProductsActivity::class.java)
+//                context?.startActivity(intent)
+                val intent=Intent(context, ShopDetailsActivity::class.java)
                 context?.startActivity(intent)
                 //                onItemClick.onDataClick(categoryList[position]._id,position, Constants.CATEGORYCLICK)
             }

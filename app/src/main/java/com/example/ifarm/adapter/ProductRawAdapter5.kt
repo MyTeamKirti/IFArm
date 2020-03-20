@@ -1,7 +1,9 @@
 package com.example.ifarm.adapter
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import com.example.ifarm.activity.ShopDetailsActivity
 import com.example.ifarm.databinding.CustomRawRatedproductLayoutBinding
 import com.example.ifarm.databinding.CustomTopRatedproductsRawlayoutBinding
 import com.example.ifarm.model.ProductData1
@@ -27,10 +29,11 @@ class ProductRawAdapter5(internal var productList:ArrayList<ProductData1>):
             mBinding.model = productList[position]
             mBinding.ivProduct.setImageResource(productList[position].imageURL)
 
-
-//            mBinding.root.linearTabButton.setOnClickListener {
-//                //                onItemClick.onDataClick(categoryList[position]._id,position, Constants.CATEGORYCLICK)
-//            }
+            mBinding.root.setOnClickListener {
+                val intent= Intent(context, ShopDetailsActivity::class.java)
+                context?.startActivity(intent)
+//                onItemClick.onDataClick(categoryList[position]._id,position, Constants.CATEGORYCLICK)
+            }
         }
     }
 }

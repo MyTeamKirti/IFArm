@@ -7,14 +7,14 @@
         android:title="Home"/>
 
     <item
+        android:id="@+id/navigationShops"
+        android:icon="@drawable/shops_bottom_icon"
+        android:title="Shops"/>
+
+    <item
         android:id="@+id/navigationCommunity"
         android:icon="@drawable/community_bottom_icon"
         android:title="Community"/>
-
-    <item
-        android:id="@+id/navigationChat"
-        android:icon="@drawable/chat_bottom_icon"
-        android:title="Chat"/>
 
     <item
         android:id="@+id/navigationProfie"

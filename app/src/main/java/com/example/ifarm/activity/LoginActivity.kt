@@ -36,12 +36,9 @@ class LoginActivity : AppCompatActivity() {
         }
 
         spannableString.setSpan(clickableSpan, (26), 33, 0)
-
         spannableString.setSpan(
             ForegroundColorSpan(ContextCompat.getColor(this, R.color.colorPrimary)),
-            (26
-                    ), 33, 0
-        )
+            (26), 33, 0)
         builder.append(spannableString)
         tvSpanSignup.setText(spannableString, TextView.BufferType.SPANNABLE)
         tvSpanSignup.movementMethod = LinkMovementMethod.getInstance()

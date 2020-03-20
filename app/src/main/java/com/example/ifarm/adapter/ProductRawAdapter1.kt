@@ -4,6 +4,7 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.example.ifarm.activity.CompanyProductsActivity
+import com.example.ifarm.activity.ShopDetailsActivity
 import com.example.ifarm.databinding.CustomCategoryLayoutBinding
 import com.example.ifarm.model.ProductData1
 import com.svap.beep.abstractclasses.BaseBindingAdapter
@@ -30,8 +31,12 @@ class ProductRawAdapter1(internal var productList:ArrayList<ProductData1>):
             mBinding.ivCategoryHome.setImageResource(productList[position].imageURL)
 
             mBinding.root.setOnClickListener {
-                val intent=Intent(context,CompanyProductsActivity::class.java)
+//                val intent=Intent(context,CompanyProductsActivity::class.java)
+//                context?.startActivity(intent)
+
+                val intent=Intent(context, ShopDetailsActivity::class.java)
                 context?.startActivity(intent)
+
 //                onItemClick.onDataClick(categoryList[position]._id,position, Constants.CATEGORYCLICK)
             }
         }

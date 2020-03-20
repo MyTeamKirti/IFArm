@@ -10,8 +10,12 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.ifarm.R
 import com.example.ifarm.adapter.OrdersListAdapter
+import com.example.ifarm.fragment.HomeFragment
+import com.example.ifarm.fragment.SellerHomeFragment
 import com.example.ifarm.interfaces.OnItemClickListner
 import com.example.ifarm.model.CartResult
+import com.example.ifarm.utils.AppPreferences
+import com.example.ifarm.utils.Constants
 import kotlinx.android.synthetic.main.activity_order_history.*
 import kotlinx.android.synthetic.main.custom_toolbar_layout.*
 
@@ -58,7 +62,11 @@ class OrderHistoryActivity : AppCompatActivity(),OnItemClickListner {
 
 
     private fun setToolBar(){
-        tvToolBar.text="Order History"
+        if (AppPreferences.readInteger(this, Constants.USERTYPE,0)==1)
+            tvToolBar.text="Delivery History"
+        else
+            tvToolBar.text="Order History"
+
     }
 
     private fun setChatData(){

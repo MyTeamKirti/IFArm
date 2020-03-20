@@ -10,15 +10,16 @@
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
 
+    <string name="back_exit_msg">Please press back for exit.</string>
     <string name="business_reg">Business\nRegistration </string>
     <string name="buyer_reg">Buyer\nRegistration </string>
     <string name="confirmpswd">Confirm Password</string>
     <string name="email">Email</string>
-    <string name="login">Log In</string>
+    <string name="login">Login</string>
     <string name="offerexchange">Offer Exchange</string>
     <string name="password">Password</string>
     <string name="searchbarhint">Search For Agro-Products</string>
-    <string name="signup">Sign up</string>
+    <string name="signup">Signup</string>
     <string name="signupdonthaveaccountlogin"><![CDATA[Don\'t have a account yet? Log in]]></string>
     <string name="signupdonthaveaccount"><![CDATA[Don\'t have a account yet? Sign Up]]></string>
     <string name="username">Username</string>
@@ -41,7 +42,8 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
-    <string name="dummydesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae scelerisque augue. Proin lobortis convallis aliquam. Morbi commodo euismod ante, sit amet vulputate nibh condimentum eget.</string>
+    <string name="dummydesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae scelerisque augue. Proin lobortis convallis aliquam. Morbi commodo euismod ante, sit amet vulputate nibh condimentum eget.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae scelerisque augue. Proin lobortis convallis aliquam. Morbi commodo euismod ante, sit amet vulputate nibh condimentum eget.</string>
 
 
 </resources>

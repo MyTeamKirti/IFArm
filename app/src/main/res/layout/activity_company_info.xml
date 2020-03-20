@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,28 +12,34 @@
         android:id="@+id/toolbar"
         layout="@layout/custom_toolbar_layout"/>
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:layout_marginTop="?actionBarSize">
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/colorGreyBg"
         android:paddingLeft="@dimen/margin_size_16dp"
         android:paddingRight="@dimen/margin_size_16dp"
-        android:paddingTop="@dimen/margin_size_20dp"
-        android:layout_marginTop="?actionBarSize">
+        android:paddingTop="@dimen/margin_size_16dp">
 
         <ImageView
             android:id="@+id/ivProduct"
             android:layout_width="match_parent"
             android:layout_height="285dp"
-            android:src="@drawable/buyerinfo"
+            android:src="@drawable/group_4786"
             android:scaleType="fitXY"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintDetails"
             android:layout_width="match_parent"
-            android:layout_height="305dp"
+            android:layout_height="wrap_content"
             android:background="@drawable/rectangle_radiuswhite_bg"
             android:layout_marginLeft="28dp"
             android:layout_marginRight="28dp"
@@ -65,61 +72,61 @@
                 app:layout_constraintTop_toBottomOf="@+id/tvBuyerInfoTitle"
                 app:layout_constraintLeft_toLeftOf="parent"/>
 
-            <LinearLayout
-                android:id="@+id/linearExchang"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:layout_marginTop="@dimen/margin_size_8dp"
-                app:layout_constraintTop_toBottomOf="@+id/tvExchangewithTitle">
+<!--            <LinearLayout-->
+<!--                android:id="@+id/linearExchang"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:gravity="center_vertical"-->
+<!--                android:layout_marginTop="@dimen/margin_size_8dp"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/tvExchangewithTitle">-->
 
-                <com.example.ifarm.utils.CustomTextView
-                    android:layout_width="66dp"
-                    android:layout_height="@dimen/margin_size_24dp"
-                    android:text="Wheat"
-                    android:textSize="@dimen/text_size_12sp"
-                    app:font_name="sfuidisplay_regular"
-                    android:textColor="@color/colorEtText"
-                    android:gravity="center"
-                    android:background="@drawable/rectangle_yellow_radiusbg"
-                    />
+<!--                <com.example.ifarm.utils.CustomTextView-->
+<!--                    android:layout_width="66dp"-->
+<!--                    android:layout_height="@dimen/margin_size_24dp"-->
+<!--                    android:text="Wheat"-->
+<!--                    android:textSize="@dimen/text_size_12sp"-->
+<!--                    app:font_name="sfuidisplay_regular"-->
+<!--                    android:textColor="@color/colorEtText"-->
+<!--                    android:gravity="center"-->
+<!--                    android:background="@drawable/rectangle_yellow_radiusbg"-->
+<!--                    />-->
 
-                <com.example.ifarm.utils.CustomTextView
-                    android:layout_width="66dp"
-                    android:layout_height="@dimen/margin_size_24dp"
-                    android:text="Maize"
-                    android:textSize="@dimen/text_size_12sp"
-                    app:font_name="sfuidisplay_regular"
-                    android:textColor="@color/colorEtText"
-                    android:gravity="center"
-                    android:layout_marginLeft="@dimen/margin_size_5dp"
-                    android:background="@drawable/rectangle_green_radiusbg"
-                    />
+<!--                <com.example.ifarm.utils.CustomTextView-->
+<!--                    android:layout_width="66dp"-->
+<!--                    android:layout_height="@dimen/margin_size_24dp"-->
+<!--                    android:text="Maize"-->
+<!--                    android:textSize="@dimen/text_size_12sp"-->
+<!--                    app:font_name="sfuidisplay_regular"-->
+<!--                    android:textColor="@color/colorEtText"-->
+<!--                    android:gravity="center"-->
+<!--                    android:layout_marginLeft="@dimen/margin_size_5dp"-->
+<!--                    android:background="@drawable/rectangle_green_radiusbg"-->
+<!--                    />-->
 
-                <com.example.ifarm.utils.CustomTextView
-                    android:layout_width="66dp"
-                    android:layout_height="@dimen/margin_size_24dp"
-                    android:text="Moong"
-                    android:textSize="@dimen/text_size_12sp"
-                    app:font_name="sfuidisplay_regular"
-                    android:textColor="@color/colorEtText"
-                    android:gravity="center"
-                    android:layout_marginLeft="@dimen/margin_size_5dp"
-                    android:background="@drawable/rectangle_skyblue_radiusbg" />
-            </LinearLayout>
+<!--                <com.example.ifarm.utils.CustomTextView-->
+<!--                    android:layout_width="66dp"-->
+<!--                    android:layout_height="@dimen/margin_size_24dp"-->
+<!--                    android:text="Moong"-->
+<!--                    android:textSize="@dimen/text_size_12sp"-->
+<!--                    app:font_name="sfuidisplay_regular"-->
+<!--                    android:textColor="@color/colorEtText"-->
+<!--                    android:gravity="center"-->
+<!--                    android:layout_marginLeft="@dimen/margin_size_5dp"-->
+<!--                    android:background="@drawable/rectangle_skyblue_radiusbg" />-->
+<!--            </LinearLayout>-->
 
-            <com.example.ifarm.utils.CustomTextView
-                android:id="@+id/tvContactTitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Contact "
-                android:visibility="gone"
-                android:textSize="@dimen/text_size_14sp"
-                app:font_name="sfuidisplay_regular"
-                android:textColor="@color/colorTextGrey"
-                android:layout_marginTop="14dp"
-                app:layout_constraintTop_toBottomOf="@+id/linearExchang"
-                app:layout_constraintLeft_toLeftOf="parent"/>
+<!--            <com.example.ifarm.utils.CustomTextView-->
+<!--                android:id="@+id/tvContactTitle"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Contact "-->
+<!--                android:visibility="gone"-->
+<!--                android:textSize="@dimen/text_size_14sp"-->
+<!--                app:font_name="sfuidisplay_regular"-->
+<!--                android:textColor="@color/colorTextGrey"-->
+<!--                android:layout_marginTop="14dp"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/tvExchangewithTitle"-->
+<!--                app:layout_constraintLeft_toLeftOf="parent"/>-->
 
             <RatingBar
                 android:id="@+id/ratingBar"
@@ -133,9 +140,9 @@
                 android:transformPivotY="0dp"
                 android:isIndicator="true"
                 style="@android:style/Widget.DeviceDefault.RatingBar.Small"
-                android:layout_marginTop="@dimen/margin_size_16dp"
+                android:layout_marginTop="@dimen/margin_size_12dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvContactTitle"
+                app:layout_constraintTop_toBottomOf="@+id/tvExchangewithTitle"
                 />
 
             <com.example.ifarm.utils.CustomTextView
@@ -147,9 +154,9 @@
                 android:text="5.0"
                 android:gravity="center"
                 android:layout_marginLeft="@dimen/margin_size_5dp"
-                android:layout_marginTop="@dimen/margin_size_16dp"
+                android:layout_marginTop="@dimen/margin_size_12dp"
                 android:textColor="@color/colorEtText"
-                app:layout_constraintTop_toBottomOf="@+id/tvContactTitle"
+                app:layout_constraintTop_toBottomOf="@+id/tvExchangewithTitle"
                 app:layout_constraintLeft_toRightOf="@+id/ratingBar"/>
 
             <com.example.ifarm.utils.CustomTextView
@@ -161,9 +168,9 @@
                 android:text="280 + People"
                 android:gravity="center"
                 android:layout_marginLeft="@dimen/margin_size_5dp"
-                android:layout_marginTop="@dimen/margin_size_16dp"
+                android:layout_marginTop="@dimen/margin_size_12dp"
                 android:textColor="@color/colorTextGrey"
-                app:layout_constraintTop_toBottomOf="@+id/tvContactTitle"
+                app:layout_constraintTop_toBottomOf="@+id/tvExchangewithTitle"
                 app:layout_constraintEnd_toEndOf="parent"/>
 
 
@@ -176,17 +183,61 @@
                 android:text="@string/dummydesc"
                 android:textColor="@color/colorEtText"
                 android:lineSpacingExtra="@dimen/margin_size_4dp"
-                android:layout_marginTop="@dimen/margin_size_18dp"
+                android:layout_marginTop="@dimen/margin_size_20dp"
                 app:layout_constraintTop_toBottomOf="@+id/ratingBar"
                 app:layout_constraintLeft_toLeftOf="parent"/>
 
-            <ImageView
-                android:layout_width="45dp"
-                android:layout_height="45dp"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_size_40dp"
+                android:layout_marginTop="@dimen/margin_size_20dp"
+                app:layout_constraintTop_toBottomOf="@+id/tvDescription">
+
+                <com.example.ifarm.utils.CustomButton
+                    android:id="@+id/buttonFollow"
+                    android:layout_width="80dp"
+                    android:layout_height="@dimen/margin_size_32dp"
+                    android:background="@drawable/button_fillbg"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/text_size_14sp"
+                    android:text="Follow"
+                    android:gravity="center"
+                    app:font_name="sfuidisplay_bold"
+                    android:textAllCaps="false"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+
+                <com.example.ifarm.utils.CustomButton
+                    android:id="@+id/buttonRecentActivity"
+                    android:layout_width="128dp"
+                    android:layout_height="@dimen/margin_size_32dp"
+                    android:background="@drawable/button_fillbg"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/text_size_14sp"
+                    android:text="Recent Activity"
+                    android:gravity="center"
+                    app:font_name="sfuidisplay_bold"
+                    android:textAllCaps="false"
+                    android:layout_marginLeft="@dimen/margin_size_16dp"
+                    android:layout_marginRight="28dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toRightOf="@+id/buttonFollow"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+
+                <ImageView
+                android:layout_width="@dimen/margin_size_32dp"
+                android:layout_height="@dimen/margin_size_32dp"
                 app:srcCompat="@drawable/ic_chat_icon"
-                android:layout_marginBottom="@dimen/margin_size_16dp"
-                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginLeft="@dimen/margin_size_16dp"
+                app:layout_constraintLeft_toRightOf="@+id/buttonRecentActivity"
+                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -201,13 +252,17 @@
             android:gravity="center"
             app:font_name="sfuidisplay_bold"
             android:textAllCaps="false"
-            android:layout_marginLeft="28dp"
-            android:layout_marginRight="28dp"
-            android:layout_marginBottom="@dimen/margin_size_60dp"
+            android:layout_marginLeft="@dimen/margin_size_30dp"
+            android:layout_marginRight="@dimen/margin_size_30dp"
+            android:layout_marginTop="@dimen/margin_size_24dp"
+            android:layout_marginBottom="@dimen/margin_size_50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/constraintDetails" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

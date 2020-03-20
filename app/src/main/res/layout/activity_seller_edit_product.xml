@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGreyBg"
+    tools:context=".activity.SellerEditProductActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/custom_toolbar_layout"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorGreyBg"
+        android:paddingLeft="@dimen/margin_size_16dp"
+        android:paddingRight="@dimen/margin_size_16dp"
+        android:paddingTop="@dimen/margin_size_20dp"
+        android:layout_marginTop="?actionBarSize">
+
+        <ImageView
+            android:id="@+id/ivProduct"
+            android:layout_width="match_parent"
+            android:layout_height="285dp"
+            android:src="@drawable/image_uploaddefault"
+            android:scaleType="fitXY"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="305dp"
+            android:background="@drawable/rectangle_radiuswhite_bg"
+            android:layout_marginLeft="28dp"
+            android:layout_marginRight="28dp"
+            android:layout_marginTop="@dimen/margin_size_200dp"
+            android:padding="@dimen/margin_size_16dp"
+            app:layout_constraintTop_toTopOf="@+id/ivProduct">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilProductsName"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_size_48dp"
+                android:gravity="center_vertical"
+                app:hintEnabled="true"
+                android:hint="Product Name"
+                android:layout_gravity="center_vertical"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etProductName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:drawableTint="@color/colorGreyBorder"
+                    android:textColorHint="@color/colorEtHint"
+                    android:focusableInTouchMode="true"
+                    android:textSize="@dimen/text_size_14sp"
+                    android:maxLength="10"
+                    android:imeOptions="actionDone"
+                    android:inputType="text" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.example.ifarm.utils.CustomEditText
+                android:id="@+id/tvDescription"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_size_100dp"
+                android:textSize="@dimen/text_size_12sp"
+                app:font_name="sfuidisplay_regular"
+                android:textColor="@color/colorEtText"
+                android:hint="Description"
+                android:gravity="top"
+                android:background="@drawable/rectangle_border_edittext"
+                android:padding="@dimen/margin_size_10dp"
+                android:lineSpacingExtra="@dimen/margin_size_4dp"
+                android:layout_marginTop="@dimen/margin_size_20dp"
+                app:layout_constraintTop_toBottomOf="@+id/tilProductsName"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilPrice"
+                android:layout_width="@dimen/margin_size_100dp"
+                android:layout_height="@dimen/margin_size_48dp"
+                android:gravity="center_vertical"
+                app:hintEnabled="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="@dimen/margin_size_20dp"
+                app:layout_constraintTop_toBottomOf="@+id/tvDescription"
+                app:layout_constraintLeft_toLeftOf="parent"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:drawableTint="@color/colorGreyBorder"
+                    android:textColorHint="@color/colorEtHint"
+                    android:focusableInTouchMode="true"
+                    android:textSize="@dimen/text_size_14sp"
+                    android:hint="Price(KWD)"
+                    android:maxLength="10"
+                    android:imeOptions="actionDone"
+                    android:inputType="text" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilQuantity"
+                android:layout_width="@dimen/margin_size_100dp"
+                android:layout_height="@dimen/margin_size_48dp"
+                android:gravity="center_vertical"
+                app:hintEnabled="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/margin_size_60dp"
+                android:layout_marginTop="@dimen/margin_size_20dp"
+                app:layout_constraintTop_toBottomOf="@+id/tvDescription"
+                app:layout_constraintLeft_toRightOf="@+id/tilPrice"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etQuantity"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:drawableTint="@color/colorGreyBorder"
+                    android:textColorHint="@color/colorEtHint"
+                    android:focusableInTouchMode="true"
+                    android:textSize="@dimen/text_size_14sp"
+                    android:hint="Qty"
+                    android:maxLength="10"
+                    android:imeOptions="actionDone"
+                    android:inputType="text" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.example.ifarm.utils.CustomButton
+            android:id="@+id/buttonSaveProducts"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_size_48dp"
+            android:background="@drawable/button_fillbg"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_size_16sp"
+            android:text="Save"
+            android:gravity="center"
+            app:font_name="sfuidisplay_bold"
+            android:textAllCaps="false"
+            android:layout_marginLeft="28dp"
+            android:layout_marginRight="28dp"
+            android:layout_marginBottom="@dimen/margin_size_60dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

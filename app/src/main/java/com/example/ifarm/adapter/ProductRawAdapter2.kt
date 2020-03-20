@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.ifarm.activity.CompanyInfoActivity
 import com.example.ifarm.activity.CompanyProductsActivity
+import com.example.ifarm.activity.ShopDetailsActivity
 import com.example.ifarm.databinding.CustomTrendingLayoutBinding
 import com.example.ifarm.model.ProductData1
 import com.svap.beep.abstractclasses.BaseBindingAdapter
@@ -36,7 +37,9 @@ class ProductRawAdapter2(internal var productList:ArrayList<ProductData1>,
                 mBinding.ivNextProduct.visibility=View.VISIBLE
 
             mBinding.root.setOnClickListener {
-                val intent=Intent(context,CompanyInfoActivity::class.java)
+//                val intent=Intent(context,CompanyInfoActivity::class.java)
+//                context?.startActivity(intent)
+                val intent=Intent(context, ShopDetailsActivity::class.java)
                 context?.startActivity(intent)
                 // onItemClick.onDataClick(categoryList[position]._id,position, Constants.CATEGORYCLICK)
             }

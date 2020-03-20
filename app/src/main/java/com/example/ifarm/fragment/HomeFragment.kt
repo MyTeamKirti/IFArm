@@ -69,9 +69,9 @@ class HomeFragment : Fragment(),OnItemClickListner {
         mProductDataList2.add(data7)
         mProductDataList2.add(data8)
 
-        val postData1=PostData(mProductDataList1,1)
-        val postData2=PostData(mProductDataList2,2)
-        val postData3=PostData(mProductDataList1,1)
+        val postData1=PostData(mProductDataList1,1,"")
+        val postData2=PostData(mProductDataList2,2,"")
+        val postData3=PostData(mProductDataList1,1,"")
         mProductsList.add(postData1)
         mProductsList.add(postData2)
         mProductsList.add(postData3)

@@ -12,7 +12,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingLeft="@dimen/margin_size_16dp"
-            android:paddingRight="@dimen/margin_size_16dp"
             android:paddingTop="@dimen/margin_size_16dp"
             android:paddingBottom="@dimen/margin_size_16dp"
             app:layout_constraintTop_toTopOf="parent"
@@ -63,7 +62,7 @@
                 android:id="@+id/tvTime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="@dimen/margin_size_8dp"
+                android:layout_marginRight="@dimen/margin_size_16dp"
                 android:singleLine="true"
                 android:text="@{model.createdAt}"
                 app:font_name="sfuidisplay_regular"
@@ -78,7 +77,7 @@
                 android:id="@+id/tvRating"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="@dimen/margin_size_8dp"
+                android:layout_marginRight="@dimen/margin_size_16dp"
                 android:singleLine="true"
                 android:text="@{model.createdAt}"
                 android:drawableLeft="@drawable/ic_star_fill"
@@ -92,16 +91,26 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"/>
 
+            <View
+                android:id="@+id/indicatorBuySell"
+                android:layout_width="@dimen/margin_size_20dp"
+                android:layout_height="68dp"
+                android:visibility="visible"
+                android:background="@color/colorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/border" />
 
             <View
                 android:id="@+id/border"
-                android:layout_width="0dp"
+                android:layout_width="280dp"
                 android:layout_height="0.5dp"
                 android:background="@color/colorGreyBorder"
-                android:layout_marginTop="@dimen/margin_size_8dp"
+                android:layout_marginTop="@dimen/margin_size_16dp"
                 android:layout_marginLeft="@dimen/margin_size_16dp"
                 android:layout_marginRight="@dimen/margin_size_4dp"
                 app:layout_constraintLeft_toRightOf="@+id/ivAvatar"
+                app:layout_constraintTop_toBottomOf="@+id/indicatorBuySell"
                 app:layout_constraintBottom_toBottomOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>

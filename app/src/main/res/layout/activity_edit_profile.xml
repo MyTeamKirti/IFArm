@@ -24,11 +24,12 @@
             android:paddingTop="@dimen/margin_size_20dp"
             android:paddingBottom="@dimen/margin_size_20dp">
 
-            <LinearLayout
+            <ImageView
                 android:id="@+id/ivUser"
                 android:layout_width="@dimen/margin_size_100dp"
                 android:layout_height="@dimen/margin_size_100dp"
-                android:background="@color/colorPrimary"
+                android:elevation="3dp"
+                android:src="@drawable/userreview"
                 app:layout_constraintTop_toTopOf="@+id/constraintFields"
                 app:layout_constraintBottom_toTopOf="@+id/constraintFields"
                 app:layout_constraintLeft_toLeftOf="parent"

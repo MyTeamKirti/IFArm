@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.ifarm.R
 import com.example.ifarm.activity.BuyerInfoActivity
+import com.example.ifarm.activity.ShopDetailsActivity
 import com.example.ifarm.databinding.CustomExchangeLayoutBinding
 import com.example.ifarm.databinding.CustomTrendingLayoutBinding
 import com.example.ifarm.model.ProductData1
@@ -36,7 +37,9 @@ class ProductRawAdapter3(internal var productList:ArrayList<ProductData1>):
             mBinding.ivProduct.setImageResource(productList[position].imageURL)
 
             mBinding.root.setOnClickListener {
-                val intent= Intent(context, BuyerInfoActivity::class.java)
+//                val intent= Intent(context, BuyerInfoActivity::class.java)
+//                context?.startActivity(intent)
+                val intent=Intent(context, ShopDetailsActivity::class.java)
                 context?.startActivity(intent)
                 //                onItemClick.onDataClick(categoryList[position]._id,position, Constants.CATEGORYCLICK)
             }

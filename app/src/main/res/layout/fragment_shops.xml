@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGreyBg"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.ShopsFragment">
+
+    <LinearLayout
+        android:id="@+id/linearCategories"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/colorPrimary"
+        >
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvShopsCategories"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:nestedScrollingEnabled="false"
+        android:paddingTop="@dimen/margin_size_8dp"
+        android:paddingRight="@dimen/margin_size_8dp"
+        android:layout_gravity="center"
+        android:background="@color/colorPrimary"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    </LinearLayout>
+
+
+    <AutoCompleteTextView
+        android:id="@+id/actvSearchProducts"
+        style="@style/normal_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="@dimen/margin_size_16dp"
+        android:layout_marginRight="@dimen/margin_size_16dp"
+        android:layout_marginTop="@dimen/margin_size_16dp"
+        android:paddingLeft="@dimen/margin_size_12dp"
+        android:paddingRight="@dimen/margin_size_12dp"
+        android:background="@drawable/search_background"
+        android:hint="@string/searchbarhint"
+        android:singleLine="true"
+        app:drawableRightCompat="@drawable/ic_search"
+        app:layout_constraintTop_toBottomOf="@+id/linearCategories"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvShopsList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/colorGreyBg"
+        android:nestedScrollingEnabled="false"
+        android:layout_marginTop="@dimen/margin_size_20dp"
+        android:paddingBottom="@dimen/margin_size_120dp"
+        app:layout_constraintTop_toBottomOf="@+id/actvSearchProducts"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

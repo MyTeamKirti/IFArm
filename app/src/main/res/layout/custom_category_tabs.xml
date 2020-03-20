@@ -8,15 +8,15 @@
         <variable name="model" type="com.example.ifarm.model.CategoryResult"/>
     </data>
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/linearTabButton"
-        android:orientation="horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_width="@dimen/margin_size_200dp"
+        android:layout_height="@dimen/margin_size_50dp"
         android:layout_gravity="center"
         android:padding="@dimen/margin_size_8dp"
         android:gravity="center"
-        android:layout_marginLeft="@dimen/margin_size_16dp"
+        android:background="@color/colorPrimary"
         >
 
         <com.example.ifarm.utils.CustomTextView
@@ -28,7 +28,22 @@
             android:textColor="@color/colorWhite"
             android:textSize="@dimen/text_size_16sp"
             android:text="@{model.categoryName}"
-            app:font_name="sfuidisplay_regular"
-            android:maxLines="1"/>
-    </LinearLayout>
+            android:maxLines="1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+
+        <View
+            android:id="@+id/tabIndicator"
+            android:layout_width="@dimen/margin_size_32dp"
+            android:layout_height="@dimen/margin_size_8dp"
+            android:background="@drawable/rectangle_radiuswhite_bg"
+            android:visibility="visible"
+            android:layout_marginTop="@dimen/margin_size_4dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvCategoryName"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

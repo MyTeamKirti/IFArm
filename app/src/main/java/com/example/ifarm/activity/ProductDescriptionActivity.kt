@@ -10,6 +10,7 @@ import android.view.WindowManager
 import androidx.core.content.ContextCompat
 import com.example.ifarm.R
 import kotlinx.android.synthetic.main.activity_product_description.*
+import kotlinx.android.synthetic.main.custom_toolbar_layout.*
 
 class ProductDescriptionActivity : AppCompatActivity() {
 
@@ -26,9 +27,15 @@ class ProductDescriptionActivity : AppCompatActivity() {
     }
 
     private fun initialization(){
+        setToolBar()
         onViewClickListener()
 
     }
+
+    private fun setToolBar(){
+        tvToolBar.text="Product Description "
+    }
+
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     fun setStatusBar(activity: Activity, statusBarColor: Int) {
@@ -41,13 +48,14 @@ class ProductDescriptionActivity : AppCompatActivity() {
     }
 
     private fun onViewClickListener(){
-        buttonAddtoCart.setOnClickListener {
-            constraintCartBtn.visibility=View.VISIBLE
-            buttonAddtoCart.visibility=View.GONE
-        }
 
         ivBack.setOnClickListener {
             onBackPressed()
+        }
+
+        buttonAddtoCart.setOnClickListener {
+            constraintCartBtn.visibility=View.VISIBLE
+            buttonAddtoCart.visibility=View.GONE
         }
 
         ivminusProduct.setOnClickListener {

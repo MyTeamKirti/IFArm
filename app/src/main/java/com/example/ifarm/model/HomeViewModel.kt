@@ -17,7 +17,8 @@ data class PostData(
     val productList1: ArrayList<ProductData1>,
 //    val productList2: ArrayList<ProductData1>,
 //    val productList3: ArrayList<ProductData1>,
-    val card_type: Int
+    val card_type: Int,
+    val categoryName:String
 )
 
 data class ProductData1(

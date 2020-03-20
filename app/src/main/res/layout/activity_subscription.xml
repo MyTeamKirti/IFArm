@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGreyBg"
+    tools:context=".activity.SubscriptionActivity">
+
+    <include layout="@layout/custom_toolbar_layout"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?actionBarSize">
+
+    <com.example.ifarm.utils.CustomTextView
+        android:id="@+id/tvSubscriptionDes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dummydesc"
+        android:textSize="@dimen/text_size_12sp"
+        app:font_name="sfuidisplay_regular"
+        android:textColor="@color/colorEtText"
+        android:lineSpacingExtra="@dimen/margin_size_8dp"
+        android:paddingVertical="@dimen/margin_size_8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.example.ifarm.utils.CustomTextView
+        android:id="@+id/tvSubscriptionForTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Subscription for"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/text_size_16sp"
+        app:font_name="sfuidisplay_bold"
+        android:layout_marginTop="@dimen/margin_size_16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSubscriptionDes"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvSubsciptions"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:layout_marginTop="@dimen/margin_size_20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSubscriptionForTitle" />
+
+    <com.example.ifarm.utils.CustomButton
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_size_48dp"
+        android:background="@drawable/button_fillbg"
+        android:layout_marginBottom="@dimen/margin_size_55dp"
+        android:text="Pay Now"
+        android:textColor="@color/colorWhite"
+        android:textAllCaps="false"
+        android:layout_marginLeft="@dimen/margin_size_20dp"
+        android:layout_marginRight="@dimen/margin_size_20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

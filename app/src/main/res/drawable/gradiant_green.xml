@@ -5,4 +5,9 @@
         android:startColor="@color/endcolorGreen"
         android:endColor=  "@color/startcolorGreen"
         android:type="linear"/>
+    <corners
+        android:bottomRightRadius="@dimen/margin_size_8dp"
+        android:bottomLeftRadius="@dimen/margin_size_8dp"
+        android:topLeftRadius="@dimen/margin_size_8dp"
+        android:topRightRadius="@dimen/margin_size_8dp"/>
 </shape>

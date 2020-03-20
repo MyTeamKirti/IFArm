@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+        <import type="android.view.View"/>
+        <variable name="model" type="com.example.ifarm.model.FilterOptionData"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/contraintFilter"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:paddingVertical="@dimen/margin_size_1dp"    >
+
+    <com.example.ifarm.utils.CustomTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorEtText"
+        android:text="@{model.name}"
+        android:textSize="@dimen/text_size_18sp"
+        app:font_name="sfuidisplay_regular"
+        android:layout_marginLeft="@dimen/margin_size_32dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <CheckBox
+        android:id="@+id/checkboxFilter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="@{model.isChecked}"
+        android:layout_marginRight="@dimen/margin_size_32dp"
+        app:buttonTint="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

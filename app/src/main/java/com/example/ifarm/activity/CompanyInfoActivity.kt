@@ -26,7 +26,6 @@ class CompanyInfoActivity : AppCompatActivity() {
         finish()
     }
 
-
     private fun initialization(){
         setToolBar()
         onViewClickListener()
@@ -50,6 +49,23 @@ class CompanyInfoActivity : AppCompatActivity() {
     private fun onViewClickListener(){
         ivBack.setOnClickListener {
             onBackPressed()
+        }
+
+        buttonFollow.setOnClickListener {
+            if (buttonFollow.text=="Follow"){
+                buttonFollow.background=ContextCompat.getDrawable(this,R.drawable.button_unfill_bg)
+                buttonFollow.setTextColor(ContextCompat.getColor(this,R.color.colorPrimary))
+                buttonFollow.text="Unfollow"
+            }else{
+                buttonFollow.background=ContextCompat.getDrawable(this,R.drawable.button_fillbg)
+                buttonFollow.setTextColor(ContextCompat.getColor(this,R.color.colorWhite))
+                buttonFollow.text="Follow"
+            }
+        }
+
+        buttonRecentActivity.setOnClickListener {
+            val intent=Intent(this,RecentActivity::class.java)
+            startActivity(intent)
         }
 
         buttonProducts.setOnClickListener {

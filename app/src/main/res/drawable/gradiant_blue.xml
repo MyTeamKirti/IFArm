@@ -5,4 +5,11 @@
         android:startColor="@color/endcolorBlue"
         android:endColor=  "@color/startcolorBlue"
         android:type="linear"/>
+
+    <corners
+        android:bottomRightRadius="@dimen/margin_size_8dp"
+        android:bottomLeftRadius="@dimen/margin_size_8dp"
+        android:topLeftRadius="@dimen/margin_size_8dp"
+        android:topRightRadius="@dimen/margin_size_8dp"/>
+
 </shape>

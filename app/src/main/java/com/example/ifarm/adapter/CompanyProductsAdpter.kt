@@ -38,7 +38,6 @@ class CompanyProductsAdpter(internal var mProductList:ArrayList<CartResult>,
             mBinding.root.tvProductName.setOnClickListener {
                 val intent=Intent(context,ProductDescriptionActivity::class.java)
                 context?.startActivity(intent)
-                //                onItemClick.onDataClick("1",position, AppConstants.NOTIFICATIONCLICK) }
             }
 
             mBinding.root.ivCartProduct.setOnClickListener {

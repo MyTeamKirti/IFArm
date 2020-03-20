@@ -1,8 +1,13 @@
 package com.example.ifarm.activity
 
+import android.annotation.TargetApi
+import android.app.Activity
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.WindowManager
 import android.widget.Toast
+import androidx.core.content.ContextCompat
 import com.example.ifarm.R
 import kotlinx.android.synthetic.main.activity_buyer_info.*
 import kotlinx.android.synthetic.main.activity_edit_profile.*
@@ -12,9 +17,22 @@ class EditProfileActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setStatusBar(this,ContextCompat.getColor(this,R.color.colorPrimary))
         setContentView(R.layout.activity_edit_profile)
         initialization()
     }
+
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
+    fun setStatusBar(activity: Activity, statusBarColor: Int) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            val window = activity.window
+            //val background = drawable
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
+            window.statusBarColor = ContextCompat.getColor(this,R.color.colorPrimary)
+//            window.navigationBarColor = activity.resources.getColor(android.R.color.black)
+        }
+    }
+
 
     private fun initialization(){
         setToolBar()

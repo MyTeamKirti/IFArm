@@ -1,0 +1,92 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottomSheetFilterProd"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topConstraint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="@dimen/margin_size_16dp"
+            android:paddingBottom="@dimen/margin_size_16dp"
+            android:background="@color/colorWhite"
+            android:orientation="vertical">
+
+
+<!--            <com.example.ifarm.utils.CustomTextView-->
+<!--                android:id="@+id/tvColorThemeTitle"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:visibility="visible"-->
+<!--                android:text="dfkldkflkdl"-->
+<!--                android:textSize="@dimen/text_size_16sp"-->
+<!--                android:layout_marginLeft="@dimen/margin_size_16dp"-->
+<!--                android:layout_marginRight="@dimen/margin_size_16dp"-->
+<!--                android:layout_marginTop="@dimen/margin_size_4dp"-->
+<!--                app:layout_constraintTop_toTopOf="parent"/>-->
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvFilterProducts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:clipToPadding="false"
+                android:paddingTop="@dimen/margin_size_5dp"
+                android:layout_marginBottom="@dimen/margin_size_8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/linearButtons"/>
+
+            <LinearLayout
+                android:id="@+id/linearButtons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/margin_size_12dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rvFilterProducts">
+
+                <com.example.ifarm.utils.CustomTextView
+                    android:id="@+id/buttonCancel"
+                    android:layout_width="@dimen/margin_size_100dp"
+                    android:layout_height="@dimen/margin_size_40dp"
+                    android:text="Cancel"
+                    android:background="@drawable/button_unfill_bg"
+                    android:textSize="@dimen/text_size_16sp"
+                    app:font_name="sfuidisplay_bold"
+                    android:textColor="@color/colorPrimary"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:layout_marginLeft="@dimen/margin_size_16dp"/>
+
+                <com.example.ifarm.utils.CustomTextView
+                    android:id="@+id/buttonApply"
+                    android:layout_width="@dimen/margin_size_100dp"
+                    android:layout_height="@dimen/margin_size_40dp"
+                    android:gravity="center"
+                    android:background="@drawable/button_fillbg"
+                    android:text="Apply"
+                    android:textColor="@color/colorWhite"
+                    app:font_name="sfuidisplay_bold"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/text_size_16sp"
+                    android:layout_marginLeft="@dimen/margin_size_16dp"/>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

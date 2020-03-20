@@ -40,7 +40,6 @@ class CartActivity : AppCompatActivity(),OnItemClickListner {
     override fun onDataClick(text: String, pos: Int, key_text: String) {
     }
 
-
     private fun initialization(){
         setToolBar()
         onViewClickListener()
@@ -51,15 +50,14 @@ class CartActivity : AppCompatActivity(),OnItemClickListner {
     fun setStatusBar(activity: Activity, statusBarColor: Int) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             val window = activity.window
-            //val background = drawable
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
             window.statusBarColor = ContextCompat.getColor(this,R.color.colorPrimary)
-//            window.navigationBarColor = activity.resources.getColor(android.R.color.black)
         }
     }
 
     private fun setToolBar(){
         tvToolBar.text="Cart"
+
     }
 
     private fun onViewClickListener(){
@@ -73,7 +71,7 @@ class CartActivity : AppCompatActivity(),OnItemClickListner {
         }
     }
 
-    private fun setChatData(){
+    private fun setCartData(){
         val cartResult1= CartResult(
             "0","Britannica Sesame","Daman Seeds",
             "1 kilogram","$ 250",R.drawable.product,
@@ -94,12 +92,10 @@ class CartActivity : AppCompatActivity(),OnItemClickListner {
         mCartList.add(cartResult2)
         mCartList.add(cartResult3)
         mCartList.add(cartResult4)
-
-
     }
 
     private fun setAdapter(){
-        setChatData()
+        setCartData()
         val mLayoutManager: LinearLayoutManager by lazy(LazyThreadSafetyMode.PUBLICATION) {
             LinearLayoutManager(this) }
         rvCartList.layoutManager = mLayoutManager
@@ -107,7 +103,4 @@ class CartActivity : AppCompatActivity(),OnItemClickListner {
         mCartListAdapter = CartListAdapter(mCartList,this)
         rvCartList.adapter = mCartListAdapter
     }
-
-
-
 }

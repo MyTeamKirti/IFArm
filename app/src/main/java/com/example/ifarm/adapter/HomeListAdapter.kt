@@ -22,10 +22,12 @@ class HomeListAdapter(private var postList:ArrayList<PostData>,
     private var trendingProductList: ArrayList<ProductData1>? = null
     private var itemPos=0
 
+
     inner class ProductViewHolder1(var mBinding: CustomTrendingRecycleviewBinding) :
         BaseViewHolder(mBinding.root) {
         override fun onBind(position: Int) {
             itemPos=position
+            mBinding.tvTrendingShopsTitle.text=postList[position].categoryName
             setTrendingAdapter(mBinding)
             if (currentFrag==0){
                 mBinding.tvTrendingShopsTitle.visibility= View.GONE
@@ -39,6 +41,7 @@ class HomeListAdapter(private var postList:ArrayList<PostData>,
         BaseViewHolder(mBinding.root) {
         override fun onBind(position: Int) {
             itemPos=position
+            mBinding.tvCategoryTitle.text=postList[position].categoryName
             setCategoryAdapter(mBinding)
             if (currentFrag==0){
                 mBinding.tvCategoryTitle.visibility= View.GONE
@@ -52,6 +55,7 @@ class HomeListAdapter(private var postList:ArrayList<PostData>,
         BaseViewHolder(mBinding.root) {
         override fun onBind(position: Int) {
             itemPos=position
+            mBinding.tvExchangeTitle.text=postList[position].categoryName
             setExchangAdapter(mBinding)
         }
     }
@@ -60,6 +64,7 @@ class HomeListAdapter(private var postList:ArrayList<PostData>,
         BaseViewHolder(mBinding.root) {
         override fun onBind(position: Int) {
             itemPos=position
+            mBinding.tvRatedTitle.text=postList[position].categoryName
             setTopRatedProductsAdapter(mBinding)
         }
     }
@@ -68,7 +73,7 @@ class HomeListAdapter(private var postList:ArrayList<PostData>,
         BaseViewHolder(mBinding.root) {
         override fun onBind(position: Int) {
             itemPos=position
-            mBinding.tvRatedTitle.text="Top Seeds"
+            mBinding.tvRatedTitle.text=postList[position].categoryName
             setRatedProducts(mBinding)
         }
     }
@@ -132,8 +137,8 @@ class HomeListAdapter(private var postList:ArrayList<PostData>,
         val mLayoutManager = LinearLayoutManager(
             context, LinearLayoutManager.HORIZONTAL, false)
         mBinding.rvTrendingProducts.layoutManager = mLayoutManager
-        val snapHelper = PagerSnapHelper()
-        snapHelper.attachToRecyclerView(mBinding.rvTrendingProducts)
+//        val snapHelper = PagerSnapHelper()
+//        snapHelper.attachToRecyclerView(mBinding.rvTrendingProducts)
         val trendingProductAdapter = ProductRawAdapter2(trendingProductList!!,currentFrag)
         mBinding.rvTrendingProducts.adapter = trendingProductAdapter
     }

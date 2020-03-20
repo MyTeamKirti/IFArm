@@ -10,6 +10,7 @@ import android.widget.Toast
 import androidx.core.content.ContextCompat
 import com.example.ifarm.R
 import kotlinx.android.synthetic.main.activity_buyer_info.*
+import kotlinx.android.synthetic.main.activity_buyer_info.buttonFollow
 import kotlinx.android.synthetic.main.custom_toolbar_layout.*
 
 class BuyerInfoActivity : AppCompatActivity() {
@@ -50,6 +51,18 @@ class BuyerInfoActivity : AppCompatActivity() {
     private fun onViewClickListener(){
         ivBack.setOnClickListener {
             onBackPressed()
+        }
+
+        buttonFollow.setOnClickListener {
+            if (buttonFollow.text=="Follow"){
+                buttonFollow.background=ContextCompat.getDrawable(this,R.drawable.button_unfill_bg)
+                buttonFollow.setTextColor(ContextCompat.getColor(this,R.color.colorPrimary))
+                buttonFollow.text="Unfollow"
+            }else{
+                buttonFollow.background=ContextCompat.getDrawable(this,R.drawable.button_fillbg)
+                buttonFollow.setTextColor(ContextCompat.getColor(this,R.color.colorWhite))
+                buttonFollow.text="Follow"
+            }
         }
 
         buttonOfferExchange.setOnClickListener {

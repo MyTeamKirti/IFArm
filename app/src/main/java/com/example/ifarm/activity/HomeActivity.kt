@@ -4,7 +4,6 @@ import android.annotation.SuppressLint
 import android.annotation.TargetApi
 import android.app.Activity
 import android.content.Intent
-import android.graphics.drawable.Drawable
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -13,12 +12,12 @@ import android.view.Gravity
 import android.view.WindowManager
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.ifarm.R
 import com.example.ifarm.adapter.NavigationDrawerAdapter
 import com.example.ifarm.fragment.*
 import com.example.ifarm.interfaces.OnItemClickListner
+import com.example.ifarm.utils.AppPreferences
 import com.example.ifarm.utils.Constants
 import kotlinx.android.synthetic.main.activity_home.*
 import kotlinx.android.synthetic.main.app_bar_home.*
@@ -28,12 +27,34 @@ class HomeActivity : AppCompatActivity(),OnItemClickListner {
 
     private var mDrawerIconList=ArrayList<Int>()
     private var mDrawerItemList=ArrayList<String>()
+    private var doubleBackToExitPressed = false
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setStatusBar(this,ContextCompat.getColor(this,R.color.colorPrimary))
         setContentView(R.layout.activity_home)
         initialization()
+    }
+
+    override fun onBackPressed() {
+//        val fragments = supportFragmentManager.backStackEntryCount
+//        if (fragments == 1) {
+//            if (!doubleBackToExitPressed) {
+//                this.doubleBackToExitPressed = true
+//                Toast.makeText(this,resources.getString(R.string.back_exit_msg),Toast.LENGTH_SHORT).show()
+////                showToast(resources.getString(R.string.back_exit_msg))
+//            } else {
+//                super.onBackPressed()
+//                finish()
+//            }
+//        } else if (supportFragmentManager.backStackEntryCount > 1) {
+//            supportFragmentManager.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE)
+////            loadFragment(HomeFragment(),"",supportFragmentManager.bace)
+//            bottom_navigation.menu.getItem(0).isChecked = true
+//        } else {
+//            super.onBackPressed()
+//        }
     }
 
     override fun onButtonMainClick(activity_name: String) {
@@ -64,7 +85,12 @@ class HomeActivity : AppCompatActivity(),OnItemClickListner {
                     val intent = Intent(this, FAQActivity::class.java)
                     startActivity(intent)
                 }
-                5 -> finish()
+                5 -> {
+                    val intent = Intent(this, RegistrationActivity::class.java)
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+                    startActivity(intent)
+                    finish()
+                }
             }
         }
 
@@ -78,7 +104,7 @@ class HomeActivity : AppCompatActivity(),OnItemClickListner {
     private fun initialization(){
         setDrawerItems()
         setAdapter()
-        loadFragment(HomeFragment(),"Home",0)
+        navigateToHome()
         onViewClickListener()
         setBottomNavigationListener()
     }
@@ -130,7 +156,6 @@ class HomeActivity : AppCompatActivity(),OnItemClickListner {
             transaction.commit()
         }
         bottom_navigation.menu.getItem(position).isChecked = true
-
     }
 
     private fun setBottomNavigationListener(){
@@ -140,14 +165,15 @@ class HomeActivity : AppCompatActivity(),OnItemClickListner {
         bottom_navigation.setOnNavigationItemSelectedListener {
             when (it.itemId) {
                 R.id.navigationHome -> {
-                        loadFragment(HomeFragment(),"",0)
+                        navigateToHome()
+                }
+                R.id.navigationShops -> {
+                        loadFragment(ShopsFragment(),"",1)
                 }
                 R.id.navigationCommunity -> {
-                        loadFragment(CommunityFragment(),"",1)
+                        loadFragment(CommunityFragment(),"",2)
                 }
-                R.id.navigationChat -> {
-                        loadFragment(ChatFragment(),"",2)
-                }
+
                 R.id.navigationProfie -> {
                     loadFragment(ProfileFragment(),"",3)
                 }
@@ -172,8 +198,13 @@ class HomeActivity : AppCompatActivity(),OnItemClickListner {
                 val intent=Intent(this,CartActivity::class.java)
                 startActivity(intent)
             }
-
         }
+    }
 
+    private fun navigateToHome(){
+        if (AppPreferences.readInteger(this, Constants.USERTYPE,0)==1)
+            loadFragment(SellerHomeFragment(),"seller",0)
+        else
+            loadFragment(HomeFragment(),"Home",0)
     }
 }
